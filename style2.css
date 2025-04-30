@@ -1,0 +1,314 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    overflow-x: hidden;
+    background-color: var(--light);
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+#bar {
+    position: relative;
+    bottom: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#bar a:hover {
+    background-color: #c4c4c6;
+    color: rgb(57, 54, 54);
+    
+   
+}
+
+#bar a.active {
+    background-color: #8A4FFF;
+    color: white;
+    font-weight: bold;
+}
+
+#bar a:focus {
+    outline: none;
+}
+
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+
+@keyframes drawText {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+.hero-section .majdoor{
+    position: absolute;
+    opacity: 0.3;
+    width: 100%;
+    height:100vh;
+}
+    
+.hero-section {
+    height: 100vh;
+  background-color: black;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.hero-section h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 63px;
+    font-weight: bold;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5); 
+}
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--primary);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+.letter-intro {
+    padding: 100px  0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: orange;
+    font-weight: bold;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.Comparison{
+    padding: 10px 0 100px 0;
+   
+}
+
+.comparison-chart {
+    height: 70vh;
+    width: 70vw;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+ 
+    margin-left: 15vw;
+
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: orange;
+}
+
+.main-counter{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+ 
+}
+
+.sector-details {
+    display:none;
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.card-custom {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 50vh;
+}
+
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+}
+
+.cta-section {
+    background-color: #8A4FFF;
+    color: white;
+    
+}
+.tech-impact-calculator {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    max-width: 400px;
+}
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    min-height: 50vh;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    min-height: 100%
+  }
+  
+  
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .flip-card-front {
+    z-index: 2;
+  }
+  
+  .flip-card-back {
+    background: #fff;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+.tech-impact-calculator h2 {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.tech-impact-calculator form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tech-impact-calculator label {
+    margin-top: 10px;
+}
+
+.tech-impact-calculator input,
+.tech-impact-calculator select,
+.tech-impact-calculator button {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.tech-impact-calculator button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tech-impact-calculator button:hover {
+    background-color: #0056b3;
+}
+
+.impact-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e6f2ff;
+    border-radius: 8px;
+
+}
+
+#tech-impact-calculator{
+
+    margin-left: 35%;
+    margin-bottom: 30px;
+    
+}
